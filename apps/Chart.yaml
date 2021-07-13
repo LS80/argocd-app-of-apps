@@ -1,0 +1,3 @@
+apiVersion: 2
+name: apps
+version: 1.0.0

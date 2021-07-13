@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: more_apps-{{ $.Values.namespace }}
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: {{ $.Values.namespace }}
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/LS80/argocd-app-of-apps.git
+    path: more_apps
+    targetRevision: {{ .Values.branch }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
