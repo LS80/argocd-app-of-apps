@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://charts.bitnami.com/bitnami
     chart: elasticsearch
-    targetRevision: 15.6.0
+    targetRevision: 21.3.22
   syncPolicy:
     automated:
       prune: true
