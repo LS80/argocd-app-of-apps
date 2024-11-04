@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://charts.bitnami.com/bitnami
     chart: postgresql
-    targetRevision: 8.10.4
+    targetRevision: 16.1.1
   syncPolicy:
     automated:
       prune: true
