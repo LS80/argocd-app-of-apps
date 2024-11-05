@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://charts.bitnami.com/bitnami
     chart: redis
-    targetRevision: 10.6.17
+    targetRevision: 20.2.1
   syncPolicy:
     automated:
       prune: true
